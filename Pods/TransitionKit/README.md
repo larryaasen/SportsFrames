@@ -1,6 +1,8 @@
 TransitionKit
 =============
 
+[![Build Status](https://travis-ci.org/blakewatters/TransitionKit.png?branch=master,development)](https://travis-ci.org/blakewatters/TransitionKit)
+
 **A simple, elegantly designed block based API for implementing State Machines in Objective-C**
 
 TransitionKit is a small Cocoa library that provides an API for implementing a state machine in Objective C. It is full-featured, completely documented, and very thoroughly unit tested. State machines are a great way to manage complexity in your application and TransitionKit provides you with a great way to take advantage of a state machine in your next iOS or Mac OS X application.
@@ -62,10 +64,10 @@ TKState *unread = [TKState stateWithName:@"Unread"];
 [unread setDidEnterStateBlock:^(TKState *state, TKStateMachine *stateMachine) {
     [self incrementUnreadCount];
 }];
+TKState *read = [TKState stateWithName:@"Read"];
 [read setDidExitStateBlock:^(TKState *state, TKStateMachine *stateMachine) {
     [self decrementUnreadCount];
 }];
-TKState *read = [TKState stateWithName:@"Read"];
 TKState *deleted = [TKState stateWithName:@"Deleted"];
 [deleted setDidEnterStateBlock:^(TKState *state, TKStateMachine *stateMachine) {
     [self moveMessageToTrash];
@@ -80,8 +82,8 @@ TKEvent *markAsUnread = [TKEvent eventWithName:@"Mark as Unread" transitioningFr
 
 [inboxStateMachine addEventsFromArray:@[ viewMessage, deleteMessage, markAsUnread ]];
 
-// Start the state machine
-[inboxStateMachine start];
+// Activate the state machine
+[inboxStateMachine activate];
 
 [inboxStateMachine isInState:@"Unread"]; // YES, the initial state
 
