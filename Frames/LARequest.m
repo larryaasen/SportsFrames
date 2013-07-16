@@ -28,6 +28,7 @@
   // JSON looks like {"article": {"title": "My Article", "author": "Blake", "body": "Very cool!!"}}
   NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful); // Anything in 2xx
   RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:[Contents modelMapping]
+                                                                                          method:RKRequestMethodGET
                                                                                      pathPattern:nil
                                                                                          keyPath:@"contents"
                                                                                      statusCodes:statusCodes];
