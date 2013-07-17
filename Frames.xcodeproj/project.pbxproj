@@ -25,7 +25,8 @@
 		462876891749C15E00D1AAD7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 462876881749C15E00D1AAD7 /* Default-568h@2x.png */; };
 		4628768C1749C15E00D1AAD7 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4628768A1749C15E00D1AAD7 /* MainStoryboard_iPhone.storyboard */; };
 		4628769A1749C4E300D1AAD7 /* ContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462876991749C4E300D1AAD7 /* ContentsViewController.m */; };
-		4628769D1749C6DE00D1AAD7 /* LARequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4628769C1749C6DE00D1AAD7 /* LARequest.m */; };
+		46DEBD061796AF6F00E048D0 /* LAProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DEBD051796AF6F00E048D0 /* LAProvider.m */; };
+		46DEBD091796C28700E048D0 /* ContentsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DEBD081796C28700E048D0 /* ContentsProvider.m */; };
 		683CE89822E146F6AC9DDB20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 156FF16AA7A245EBA2B5A37F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +59,10 @@
 		4628768B1749C15E00D1AAD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		462876981749C4E300D1AAD7 /* ContentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentsViewController.h; sourceTree = "<group>"; };
 		462876991749C4E300D1AAD7 /* ContentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentsViewController.m; sourceTree = "<group>"; };
-		4628769B1749C6DE00D1AAD7 /* LARequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LARequest.h; sourceTree = "<group>"; };
-		4628769C1749C6DE00D1AAD7 /* LARequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LARequest.m; sourceTree = "<group>"; };
+		46DEBD041796AF6F00E048D0 /* LAProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LAProvider.h; path = controller/LAProvider.h; sourceTree = "<group>"; };
+		46DEBD051796AF6F00E048D0 /* LAProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LAProvider.m; path = controller/LAProvider.m; sourceTree = "<group>"; };
+		46DEBD071796C28700E048D0 /* ContentsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentsProvider.h; path = controller/ContentsProvider.h; sourceTree = "<group>"; };
+		46DEBD081796C28700E048D0 /* ContentsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentsProvider.m; path = controller/ContentsProvider.m; sourceTree = "<group>"; };
 		5A0F61E411BD416B887C4C9D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -125,6 +128,7 @@
 		462876781749C15E00D1AAD7 /* Frames */ = {
 			isa = PBXGroup;
 			children = (
+				46DEBD031796AF1800E048D0 /* controller */,
 				460B98A31749CA3800015FA2 /* model */,
 				462876811749C15E00D1AAD7 /* AppDelegate.h */,
 				462876821749C15E00D1AAD7 /* AppDelegate.m */,
@@ -134,8 +138,6 @@
 				460B98B71750FF4200015FA2 /* LAFeedCell.m */,
 				460B98BF175459DC00015FA2 /* LANavigationController.h */,
 				460B98C0175459DD00015FA2 /* LANavigationController.m */,
-				4628769B1749C6DE00D1AAD7 /* LARequest.h */,
-				4628769C1749C6DE00D1AAD7 /* LARequest.m */,
 				4628768A1749C15E00D1AAD7 /* MainStoryboard_iPhone.storyboard */,
 				460B98BB1752BEE000015FA2 /* placeholder@2x.png */,
 				462876791749C15E00D1AAD7 /* Supporting Files */,
@@ -155,6 +157,17 @@
 				462876881749C15E00D1AAD7 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46DEBD031796AF1800E048D0 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				46DEBD041796AF6F00E048D0 /* LAProvider.h */,
+				46DEBD051796AF6F00E048D0 /* LAProvider.m */,
+				46DEBD071796C28700E048D0 /* ContentsProvider.h */,
+				46DEBD081796C28700E048D0 /* ContentsProvider.m */,
+			);
+			name = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,11 +274,12 @@
 				4628767F1749C15E00D1AAD7 /* main.m in Sources */,
 				462876831749C15E00D1AAD7 /* AppDelegate.m in Sources */,
 				4628769A1749C4E300D1AAD7 /* ContentsViewController.m in Sources */,
-				4628769D1749C6DE00D1AAD7 /* LARequest.m in Sources */,
 				460B98A81749CA4C00015FA2 /* Contents.m in Sources */,
 				460B98A91749CA4C00015FA2 /* Video.m in Sources */,
 				460B98B81750FF4200015FA2 /* LAFeedCell.m in Sources */,
 				460B98C1175459DD00015FA2 /* LANavigationController.m in Sources */,
+				46DEBD061796AF6F00E048D0 /* LAProvider.m in Sources */,
+				46DEBD091796C28700E048D0 /* ContentsProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

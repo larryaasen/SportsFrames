@@ -10,7 +10,18 @@
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import <UIKit/UIKit.h>
+#import "RestKit.h"
 
-@interface ContentsViewController : UITableViewController
+typedef void(^LAProviderCallbackBlock)(NSError *error, id result);
+
+@interface LAProvider : NSObject
+
+- (void)create:(NSObject *)modelObject completionBlock:(LAProviderCallbackBlock)completionBlock;
+- (void)getAllWithCompletionBlock:(LAProviderCallbackBlock)completionBlock;
+
+#pragma mark Overridable methods
+- (NSString *)requestURL;
+- (RKResponseDescriptor *)responseDescriptor;
+- (id)processResult:(RKMappingResult *)mappingResult withError:(NSError **)error;
+
 @end

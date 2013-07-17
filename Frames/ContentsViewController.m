@@ -11,6 +11,7 @@
  */
 
 #import "ContentsViewController.h"
+#import "ContentsProvider.h"
 #import "LAFeedCell.h"
 #import "Video.h"
 #import "UIImageView+AFNetworking.h"
@@ -28,17 +29,20 @@ static NSString *CellIdentifier = @"LAFeedCell";
 
 - (void)viewDidLoad
 {
+  [super viewDidLoad];
+
   [self.tableView registerClass:[LAFeedCell class] forCellReuseIdentifier:CellIdentifier];
   
   self.tableView.rowHeight = LAFeedCell.cellHeight;
   self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
 
   // http://scores.espn.go.com/allsports/scorecenter/v2/videos/build?sport=top
-  LARequest *request = LARequest.new;
-  request.delegate = self;
-  [request start];
-  
-  [super viewDidLoad];
+  ContentsProvider *provider = ContentsProvider.new;
+  [provider getAllWithCompletionBlock:^(NSError *error, id result) {
+    Contents *contents = result;
+    self.contents = contents.contents;
+    [self.tableView reloadData];
+  }];
 }
 
 #pragma mark - Table view data source
@@ -64,12 +68,6 @@ static NSString *CellIdentifier = @"LAFeedCell";
   return cell;
 }
 
-- (void)request:(LARequest *)request completedWithContents:(Contents *)aContents
-{
-  self.contents = aContents.contents;
-  [self.tableView reloadData];
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   Video *video = [self.contents objectAtIndex:indexPath.row];
@@ -80,11 +78,6 @@ static NSString *CellIdentifier = @"LAFeedCell";
     self.player.moviePlayer.controlStyle = MPMovieControlStyleFullscreen;
     self.player.moviePlayer.fullscreen = YES;
     [self presentMoviePlayerViewControllerAnimated:self.player];
-//    [self.navigationController pushViewController:self.player animated:YES];
-    
-//    self.player.controlStyle = MPMovieControlStyleFullscreen;
-//    self.player.view.frame = [[UIScreen mainScreen] bounds];
-//    [self.player play];
   }
 }
 @end
