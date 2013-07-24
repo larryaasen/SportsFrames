@@ -7,7 +7,11 @@
 // lanekit generate model Video duration:string headline:string image:string location:string
 //
 
+#if defined(SEN_TESTING)
+#import <SenTestingKit/SenTestingKit.h>
+#else
 #import <Foundation/Foundation.h>
+#endif
 
 @class RKObjectMapping;
 
@@ -15,10 +19,20 @@
 
 @property (nonatomic,strong) NSString *duration;
 @property (nonatomic,strong) NSString *headline;
-@property (nonatomic,strong) NSString *image;     // add special mapping image.uri
+@property (nonatomic,strong) NSString *image;
 @property (nonatomic,strong) NSString *location;
 
 + (RKObjectMapping *)requestMapping;
 + (RKObjectMapping *)responseMapping;
 
 @end
+
+#pragma mark SenTestingKit test cases
+
+#if defined(SEN_TESTING)
+@interface VideoTesting : SenTestCase
+
+- (void)testMapping;
+
+@end
+#endif

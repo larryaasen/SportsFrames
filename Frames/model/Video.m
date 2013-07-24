@@ -47,3 +47,32 @@
 }
 
 @end
+
+#pragma mark SenTestingKit test cases
+
+#if defined(SEN_TESTING)
+@implementation VideoTesting
+
+- (void)testMapping
+{
+    RKObjectMapping *requestMapping = [Video requestMapping];
+    STAssertNotNil(requestMapping, @"[Video requestMapping] returned nil.");
+
+    RKObjectMapping *responseMapping = [Video responseMapping];
+    STAssertNotNil(responseMapping, @"[Video responseMapping] returned nil.");
+
+    Video *video = Video.new;
+    STAssertNotNil(video, @"Video.new returned nil.");
+
+    video.duration = @"value";
+    STAssertTrue([video.duration isEqualToString:@"value"], @"video.duration has incorrect value.");
+    video.headline = @"value";
+    STAssertTrue([video.headline isEqualToString:@"value"], @"video.headline has incorrect value.");
+    video.image = @"value";
+    STAssertTrue([video.image isEqualToString:@"value"], @"video.image has incorrect value.");
+    video.location = @"value";
+    STAssertTrue([video.location isEqualToString:@"value"], @"video.location has incorrect value.");
+}
+
+@end
+#endif

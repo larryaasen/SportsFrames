@@ -25,6 +25,14 @@
 		462876891749C15E00D1AAD7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 462876881749C15E00D1AAD7 /* Default-568h@2x.png */; };
 		4628768C1749C15E00D1AAD7 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4628768A1749C15E00D1AAD7 /* MainStoryboard_iPhone.storyboard */; };
 		4628769A1749C4E300D1AAD7 /* ContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462876991749C4E300D1AAD7 /* ContentsViewController.m */; };
+		464313E5179F77BE007A1F89 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464313E4179F77BE007A1F89 /* SenTestingKit.framework */; };
+		464313E6179F77BE007A1F89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462876721749C15E00D1AAD7 /* UIKit.framework */; };
+		464313E7179F77BE007A1F89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462876741749C15E00D1AAD7 /* Foundation.framework */; };
+		464313ED179F77BE007A1F89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 464313EB179F77BE007A1F89 /* InfoPlist.strings */; };
+		464313F0179F77BE007A1F89 /* FramesTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 464313EF179F77BE007A1F89 /* FramesTesting.m */; };
+		464313F5179F79DB007A1F89 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 460B98A71749CA4C00015FA2 /* Video.m */; };
+		464313F6179F79E1007A1F89 /* Contents.m in Sources */ = {isa = PBXBuildFile; fileRef = 460B98A51749CA4C00015FA2 /* Contents.m */; };
+		464313F7179F7C52007A1F89 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 156FF16AA7A245EBA2B5A37F /* libPods.a */; };
 		46DEBD061796AF6F00E048D0 /* LAProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DEBD051796AF6F00E048D0 /* LAProvider.m */; };
 		46DEBD091796C28700E048D0 /* ContentsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DEBD081796C28700E048D0 /* ContentsProvider.m */; };
 		683CE89822E146F6AC9DDB20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 156FF16AA7A245EBA2B5A37F /* libPods.a */; };
@@ -59,6 +67,13 @@
 		4628768B1749C15E00D1AAD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		462876981749C4E300D1AAD7 /* ContentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentsViewController.h; sourceTree = "<group>"; };
 		462876991749C4E300D1AAD7 /* ContentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentsViewController.m; sourceTree = "<group>"; };
+		464313E3179F77BE007A1F89 /* FramesTesting.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FramesTesting.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		464313E4179F77BE007A1F89 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		464313EA179F77BE007A1F89 /* FramesTesting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FramesTesting-Info.plist"; sourceTree = "<group>"; };
+		464313EC179F77BE007A1F89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		464313EE179F77BE007A1F89 /* FramesTesting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FramesTesting.h; sourceTree = "<group>"; };
+		464313EF179F77BE007A1F89 /* FramesTesting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FramesTesting.m; sourceTree = "<group>"; };
+		464313F1179F77BE007A1F89 /* FramesTesting-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FramesTesting-Prefix.pch"; sourceTree = "<group>"; };
 		46DEBD041796AF6F00E048D0 /* LAProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LAProvider.h; path = controller/LAProvider.h; sourceTree = "<group>"; };
 		46DEBD051796AF6F00E048D0 /* LAProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LAProvider.m; path = controller/LAProvider.m; sourceTree = "<group>"; };
 		46DEBD071796C28700E048D0 /* ContentsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentsProvider.h; path = controller/ContentsProvider.h; sourceTree = "<group>"; };
@@ -80,6 +95,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		464313DF179F77BE007A1F89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				464313E5179F77BE007A1F89 /* SenTestingKit.framework in Frameworks */,
+				464313E6179F77BE007A1F89 /* UIKit.framework in Frameworks */,
+				464313E7179F77BE007A1F89 /* Foundation.framework in Frameworks */,
+				464313F7179F7C52007A1F89 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -98,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				462876781749C15E00D1AAD7 /* Frames */,
+				464313E8179F77BE007A1F89 /* FramesTesting */,
 				462876711749C15E00D1AAD7 /* Frameworks */,
 				462876701749C15E00D1AAD7 /* Products */,
 				5A0F61E411BD416B887C4C9D /* Pods.xcconfig */,
@@ -108,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				4628766F1749C15E00D1AAD7 /* SportsFrames.app */,
+				464313E3179F77BE007A1F89 /* FramesTesting.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +149,7 @@
 				462876761749C15E00D1AAD7 /* CoreGraphics.framework */,
 				460B98BD17544BF900015FA2 /* MediaPlayer.framework */,
 				156FF16AA7A245EBA2B5A37F /* libPods.a */,
+				464313E4179F77BE007A1F89 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,6 +188,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		464313E8179F77BE007A1F89 /* FramesTesting */ = {
+			isa = PBXGroup;
+			children = (
+				464313EE179F77BE007A1F89 /* FramesTesting.h */,
+				464313EF179F77BE007A1F89 /* FramesTesting.m */,
+				464313E9179F77BE007A1F89 /* Supporting Files */,
+			);
+			path = FramesTesting;
+			sourceTree = "<group>";
+		};
+		464313E9179F77BE007A1F89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				464313EA179F77BE007A1F89 /* FramesTesting-Info.plist */,
+				464313EB179F77BE007A1F89 /* InfoPlist.strings */,
+				464313F1179F77BE007A1F89 /* FramesTesting-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		46DEBD031796AF1800E048D0 /* controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +241,24 @@
 			productReference = 4628766F1749C15E00D1AAD7 /* SportsFrames.app */;
 			productType = "com.apple.product-type.application";
 		};
+		464313E2179F77BE007A1F89 /* FramesTesting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 464313F4179F77BE007A1F89 /* Build configuration list for PBXNativeTarget "FramesTesting" */;
+			buildPhases = (
+				464313DE179F77BE007A1F89 /* Sources */,
+				464313DF179F77BE007A1F89 /* Frameworks */,
+				464313E0179F77BE007A1F89 /* Resources */,
+				464313E1179F77BE007A1F89 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FramesTesting;
+			productName = FramesTesting;
+			productReference = 464313E3179F77BE007A1F89 /* FramesTesting.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -215,6 +282,7 @@
 			projectRoot = "";
 			targets = (
 				4628766E1749C15E00D1AAD7 /* SportsFrames */,
+				464313E2179F77BE007A1F89 /* FramesTesting */,
 			);
 		};
 /* End PBXProject section */
@@ -230,6 +298,14 @@
 				462876891749C15E00D1AAD7 /* Default-568h@2x.png in Resources */,
 				4628768C1749C15E00D1AAD7 /* MainStoryboard_iPhone.storyboard in Resources */,
 				460B98BC1752BEE000015FA2 /* placeholder@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		464313E0179F77BE007A1F89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				464313ED179F77BE007A1F89 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +325,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		464313E1179F77BE007A1F89 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
 		D4BC210926174B279BC63F52 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -283,6 +372,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		464313DE179F77BE007A1F89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				464313F0179F77BE007A1F89 /* FramesTesting.m in Sources */,
+				464313F5179F79DB007A1F89 /* Video.m in Sources */,
+				464313F6179F79E1007A1F89 /* Contents.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -302,11 +401,20 @@
 			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
+		464313EB179F77BE007A1F89 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				464313EC179F77BE007A1F89 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		462876931749C15E00D1AAD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A0F61E411BD416B887C4C9D /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -389,6 +497,39 @@
 			};
 			name = Release;
 		};
+		464313F2179F77BE007A1F89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A0F61E411BD416B887C4C9D /* Pods.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FramesTesting/FramesTesting-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "SEN_TESTING=1";
+				INFOPLIST_FILE = "FramesTesting/FramesTesting-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		464313F3179F77BE007A1F89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FramesTesting/FramesTesting-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "SEN_TESTING=1";
+				INFOPLIST_FILE = "FramesTesting/FramesTesting-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -409,6 +550,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		464313F4179F77BE007A1F89 /* Build configuration list for PBXNativeTarget "FramesTesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				464313F2179F77BE007A1F89 /* Debug */,
+				464313F3179F77BE007A1F89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
