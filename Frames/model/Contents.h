@@ -1,7 +1,7 @@
 //
 //  Contents.h
 //
-//  This model was created on 2013-05-27 by LaneKit.
+//  This model was created on 2013-07-23 by LaneKit v0.1.6.
 //
 // The following LaneKit command was used to generate this model:
 // lanekit generate model Contents contents:array:Video
@@ -15,6 +15,7 @@
 
 @property (nonatomic,strong) NSArray *contents;  // relates to: Video
 
-+ (RKObjectMapping *)modelMapping;
++ (RKObjectMapping *)requestMapping;
++ (RKObjectMapping *)responseMapping;
 
 @end

@@ -29,7 +29,7 @@
 - (RKResponseDescriptor *)responseDescriptor
 {
   NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful);
-  return [RKResponseDescriptor responseDescriptorWithMapping:[Contents modelMapping]
+  return [RKResponseDescriptor responseDescriptorWithMapping:[Contents responseMapping]
                                                       method:RKRequestMethodGET
                                                  pathPattern:nil
                                                      keyPath:@"contents"

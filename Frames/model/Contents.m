@@ -1,7 +1,7 @@
 //
 //  Contents.m
 //
-//  This model was created on 2013-05-27 by LaneKit.
+//  This model was created on 2013-07-23 by LaneKit v0.1.6.
 //
 //
 
@@ -20,17 +20,28 @@
   }
 }
 
-// Returns the RKObjectMapping for this class
-+ (RKObjectMapping *)modelMapping
++ (NSDictionary *)dictionaryForMappings
 {
-  RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[Contents class]];
-  [mapping addAttributeMappingsFromDictionary:@{
-  }];
+    return @{
+    };
+}
 
-  [mapping addRelationshipMappingWithSourceKeyPath:@"contents" mapping:[Video modelMapping]];
+// Returns the request RKObjectMapping
++ (RKObjectMapping *)requestMapping
+{
+    RKObjectMapping *requestMapping = [RKObjectMapping requestMapping];
+    [requestMapping addAttributeMappingsFromDictionary:[self dictionaryForMappings]];
+    return requestMapping;
+}
 
-  
-  return mapping;
+// Returns the response RKObjectMapping
++ (RKObjectMapping *)responseMapping
+{
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[Contents class]];
+    [mapping addAttributeMappingsFromDictionary:[self dictionaryForMappings]];
+
+    [mapping addRelationshipMappingWithSourceKeyPath:@"contents" mapping:[Video responseMapping]];
+    return mapping;
 }
 
 @end
