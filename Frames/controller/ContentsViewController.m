@@ -36,7 +36,6 @@ static NSString *CellIdentifier = @"LAFeedCell";
   self.tableView.rowHeight = LAFeedCell.cellHeight;
   self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
 
-  // http://scores.espn.go.com/allsports/scorecenter/v2/videos/build?sport=top
   ContentsProvider *provider = ContentsProvider.new;
   [provider getAllWithCompletionBlock:^(NSError *error, id result) {
     Contents *contents = result;

@@ -1,15 +1,11 @@
 //
 //  Video.m
 //
-//  This model was created on 2013-07-23 by LaneKit v0.1.6.
-//
+//  This model was created on 2013-08-10 by LaneKit v0.1.7.
 //
 
 #import "Video.h"
-#import "MobileCoreServices/MobileCoreServices.h"
-#import "SystemConfiguration/SystemConfiguration.h"
 #import "RestKit.h"
-
 
 @implementation Video
 
@@ -25,6 +21,7 @@
     return @{
         @"duration": @"duration",
         @"headline": @"headline",
+        @"id": @"id",
         @"image.uri": @"image",
         @"location": @"location"
     };
@@ -47,32 +44,3 @@
 }
 
 @end
-
-#pragma mark SenTestingKit test cases
-
-#if defined(SEN_TESTING)
-@implementation VideoTesting
-
-- (void)testMapping
-{
-    RKObjectMapping *requestMapping = [Video requestMapping];
-    STAssertNotNil(requestMapping, @"[Video requestMapping] returned nil.");
-
-    RKObjectMapping *responseMapping = [Video responseMapping];
-    STAssertNotNil(responseMapping, @"[Video responseMapping] returned nil.");
-
-    Video *video = Video.new;
-    STAssertNotNil(video, @"Video.new returned nil.");
-
-    video.duration = @"value";
-    STAssertTrue([video.duration isEqualToString:@"value"], @"video.duration has incorrect value.");
-    video.headline = @"value";
-    STAssertTrue([video.headline isEqualToString:@"value"], @"video.headline has incorrect value.");
-    video.image = @"value";
-    STAssertTrue([video.image isEqualToString:@"value"], @"video.image has incorrect value.");
-    video.location = @"value";
-    STAssertTrue([video.location isEqualToString:@"value"], @"video.location has incorrect value.");
-}
-
-@end
-#endif
