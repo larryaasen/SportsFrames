@@ -1,7 +1,7 @@
 //
 //  ContentsFixtures.m
 //
-//  This model fixture was created on 2013-08-10 by LaneKit v0.1.7.
+//  This model fixture was created on 2013-08-11 by LaneKit v0.2.0.
 //
 
 #import "ContentsFixtures.h"

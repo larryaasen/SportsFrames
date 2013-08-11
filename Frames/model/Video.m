@@ -1,7 +1,7 @@
 //
 //  Video.m
 //
-//  This model was created on 2013-08-10 by LaneKit v0.1.7.
+//  This model was created on 2013-08-11 by LaneKit v0.2.0.
 //
 
 #import "Video.h"
@@ -23,11 +23,21 @@
         @"headline": @"headline",
         @"id": @"id",
         @"image.uri": @"image",
+        @"itemDate": @"itemDate",
         @"location": @"location"
     };
 }
 
-// Returns the request RKObjectMapping
++ (NSString *)keyPath
+{
+  return @"video";
+}
+
++ (NSString *)pathPattern
+{
+  return nil;
+}
+
 + (RKObjectMapping *)requestMapping
 {
     RKObjectMapping *requestMapping = [RKObjectMapping requestMapping];
@@ -35,7 +45,6 @@
     return requestMapping;
 }
 
-// Returns the response RKObjectMapping
 + (RKObjectMapping *)responseMapping
 {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[Video class]];

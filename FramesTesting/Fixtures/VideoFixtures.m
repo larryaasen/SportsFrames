@@ -1,7 +1,7 @@
 //
 //  VideoFixtures.m
 //
-//  This model fixture was created on 2013-08-10 by LaneKit v0.1.7.
+//  This model fixture was created on 2013-08-11 by LaneKit v0.2.0.
 //
 
 #import "VideoFixtures.h"
@@ -12,11 +12,12 @@
 {
   Video *video = Video.new;
 
-video.duration = @"MyString";
-video.headline = @"MyString";
-video.id = [NSNumber numberWithInteger:1];
-video.image = @"MyString";
-video.location = @"MyString";
+  video.duration = @"MyString";
+  video.headline = @"MyString";
+  video.id = [NSNumber numberWithInteger:1];
+  video.image = @"MyString";
+  video.itemDate = NSDate.new;
+  video.location = @"MyString";
 
   return video;
 }
@@ -29,6 +30,7 @@ video.location = @"MyString";
   video.headline = @"MyString";
   video.id = [NSNumber numberWithInteger:1];
   video.image = @"MyString";
+  video.itemDate = NSDate.new;
   video.location = @"MyString";
 
   return video;

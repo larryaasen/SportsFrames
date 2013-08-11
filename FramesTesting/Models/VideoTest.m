@@ -1,7 +1,7 @@
 //
 //  VideoTest.m
 //
-//  This model test was created on 2013-08-10 by LaneKit v0.1.7.
+//  This model test was created on 2013-08-11 by LaneKit v0.2.0.
 //
 
 #import "VideoTest.h"
@@ -32,6 +32,7 @@
   STAssertTrue([video.headline isEqualToString:@"MyString"], @"headline not correct value");
   STAssertTrue(video.id.integerValue == [NSNumber numberWithInteger:1].integerValue, @"id not [NSNumber numberWithInteger:1]");
   STAssertTrue([video.image isEqualToString:@"MyString"], @"image not correct value");
+  STAssertNotNil(video.itemDate, @"itemDate is nil");
   STAssertTrue([video.location isEqualToString:@"MyString"], @"location not correct value");
 }
 
@@ -44,6 +45,7 @@
   STAssertTrue([video.headline isEqualToString:@"MyString"], @"headline not correct value");
   STAssertTrue(video.id.integerValue == [NSNumber numberWithInteger:1].integerValue, @"id not [NSNumber numberWithInteger:1]");
   STAssertTrue([video.image isEqualToString:@"MyString"], @"image not correct value");
+  STAssertNotNil(video.itemDate, @"itemDate is nil");
   STAssertTrue([video.location isEqualToString:@"MyString"], @"location not correct value");
 }
 

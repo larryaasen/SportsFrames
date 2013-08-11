@@ -1,13 +1,10 @@
 //
 //  Contents.m
 //
-//  This model was created on 2013-07-23 by LaneKit v0.1.6.
-//
+//  This model was created on 2013-08-11 by LaneKit v0.2.0.
 //
 
 #import "Contents.h"
-#import "MobileCoreServices/MobileCoreServices.h"
-#import "SystemConfiguration/SystemConfiguration.h"
 #import "RestKit.h"
 #import "Video.h"
 
@@ -26,7 +23,16 @@
     };
 }
 
-// Returns the request RKObjectMapping
++ (NSString *)keyPath
+{
+  return @"contents";
+}
+
++ (NSString *)pathPattern
+{
+  return nil;
+}
+
 + (RKObjectMapping *)requestMapping
 {
     RKObjectMapping *requestMapping = [RKObjectMapping requestMapping];
@@ -34,7 +40,6 @@
     return requestMapping;
 }
 
-// Returns the response RKObjectMapping
 + (RKObjectMapping *)responseMapping
 {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[Contents class]];

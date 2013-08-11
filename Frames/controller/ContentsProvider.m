@@ -31,8 +31,8 @@
   NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful);
   return [RKResponseDescriptor responseDescriptorWithMapping:[Contents responseMapping]
                                                       method:RKRequestMethodGET
-                                                 pathPattern:nil
-                                                     keyPath:@"contents"
+                                                 pathPattern:[Contents pathPattern]
+                                                     keyPath:[Contents keyPath]
                                                  statusCodes:statusCodes];
 }
 
