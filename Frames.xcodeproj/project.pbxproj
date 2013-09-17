@@ -13,6 +13,8 @@
 		460B98BA1751613800015FA2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460B98B91751613800015FA2 /* QuartzCore.framework */; };
 		460B98BC1752BEE000015FA2 /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 460B98BB1752BEE000015FA2 /* placeholder@2x.png */; };
 		460B98BE17544BF900015FA2 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460B98BD17544BF900015FA2 /* MediaPlayer.framework */; };
+		461C234217E7F53300B92C88 /* LKResourceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 461C234117E7F53300B92C88 /* LKResourceProvider.m */; };
+		461C234517E7F96600B92C88 /* LKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 461C234417E7F96600B92C88 /* LKModel.m */; };
 		462876731749C15E00D1AAD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462876721749C15E00D1AAD7 /* UIKit.framework */; };
 		462876751749C15E00D1AAD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462876741749C15E00D1AAD7 /* Foundation.framework */; };
 		462876771749C15E00D1AAD7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462876761749C15E00D1AAD7 /* CoreGraphics.framework */; };
@@ -34,7 +36,6 @@
 		464313F5179F79DB007A1F89 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 460B98A71749CA4C00015FA2 /* Video.m */; };
 		464313F6179F79E1007A1F89 /* Contents.m in Sources */ = {isa = PBXBuildFile; fileRef = 460B98A51749CA4C00015FA2 /* Contents.m */; };
 		464313F7179F7C52007A1F89 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 156FF16AA7A245EBA2B5A37F /* libPods.a */; };
-		46DEBD061796AF6F00E048D0 /* LAProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DEBD051796AF6F00E048D0 /* LAProvider.m */; };
 		46DEBD091796C28700E048D0 /* ContentsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DEBD081796C28700E048D0 /* ContentsProvider.m */; };
 		46FB51AA17B6A61C009D732C /* ContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462EA1AC17B6A34400D5023C /* ContentsViewController.m */; };
 		46FB51AD17B6A63C009D732C /* LANavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FB51AC17B6A63C009D732C /* LANavigationController.m */; };
@@ -52,6 +53,10 @@
 		460B98B91751613800015FA2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		460B98BB1752BEE000015FA2 /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
 		460B98BD17544BF900015FA2 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		461C234017E7F53300B92C88 /* LKResourceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKResourceProvider.h; path = controller/LKResourceProvider.h; sourceTree = "<group>"; };
+		461C234117E7F53300B92C88 /* LKResourceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKResourceProvider.m; path = controller/LKResourceProvider.m; sourceTree = "<group>"; };
+		461C234317E7F96600B92C88 /* LKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKModel.h; path = model/LKModel.h; sourceTree = "<group>"; };
+		461C234417E7F96600B92C88 /* LKModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKModel.m; path = model/LKModel.m; sourceTree = "<group>"; };
 		4628766F1749C15E00D1AAD7 /* SportsFrames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsFrames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		462876721749C15E00D1AAD7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		462876741749C15E00D1AAD7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -81,8 +86,6 @@
 		464313EA179F77BE007A1F89 /* FramesTesting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FramesTesting-Info.plist"; sourceTree = "<group>"; };
 		464313EC179F77BE007A1F89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		464313F1179F77BE007A1F89 /* FramesTesting-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FramesTesting-Prefix.pch"; sourceTree = "<group>"; };
-		46DEBD041796AF6F00E048D0 /* LAProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LAProvider.h; path = controller/LAProvider.h; sourceTree = "<group>"; };
-		46DEBD051796AF6F00E048D0 /* LAProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LAProvider.m; path = controller/LAProvider.m; sourceTree = "<group>"; };
 		46DEBD071796C28700E048D0 /* ContentsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentsProvider.h; path = controller/ContentsProvider.h; sourceTree = "<group>"; };
 		46DEBD081796C28700E048D0 /* ContentsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentsProvider.m; path = controller/ContentsProvider.m; sourceTree = "<group>"; };
 		46FB51AB17B6A63C009D732C /* LANavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LANavigationController.h; path = controller/LANavigationController.h; sourceTree = "<group>"; };
@@ -121,6 +124,8 @@
 		460B98A31749CA3800015FA2 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				461C234317E7F96600B92C88 /* LKModel.h */,
+				461C234417E7F96600B92C88 /* LKModel.m */,
 				460B98A41749CA4C00015FA2 /* Contents.h */,
 				460B98A51749CA4C00015FA2 /* Contents.m */,
 				460B98A61749CA4C00015FA2 /* Video.h */,
@@ -240,8 +245,8 @@
 			children = (
 				46FB51AB17B6A63C009D732C /* LANavigationController.h */,
 				46FB51AC17B6A63C009D732C /* LANavigationController.m */,
-				46DEBD041796AF6F00E048D0 /* LAProvider.h */,
-				46DEBD051796AF6F00E048D0 /* LAProvider.m */,
+				461C234017E7F53300B92C88 /* LKResourceProvider.h */,
+				461C234117E7F53300B92C88 /* LKResourceProvider.m */,
 				46DEBD071796C28700E048D0 /* ContentsProvider.h */,
 				46DEBD081796C28700E048D0 /* ContentsProvider.m */,
 				462EA1AB17B6A34400D5023C /* ContentsViewController.h */,
@@ -396,10 +401,11 @@
 				460B98A81749CA4C00015FA2 /* Contents.m in Sources */,
 				460B98A91749CA4C00015FA2 /* Video.m in Sources */,
 				460B98B81750FF4200015FA2 /* LAFeedCell.m in Sources */,
-				46DEBD061796AF6F00E048D0 /* LAProvider.m in Sources */,
 				46DEBD091796C28700E048D0 /* ContentsProvider.m in Sources */,
 				46FB51AA17B6A61C009D732C /* ContentsViewController.m in Sources */,
 				46FB51AD17B6A63C009D732C /* LANavigationController.m in Sources */,
+				461C234217E7F53300B92C88 /* LKResourceProvider.m in Sources */,
+				461C234517E7F96600B92C88 /* LKModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

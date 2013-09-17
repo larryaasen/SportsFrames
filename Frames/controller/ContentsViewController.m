@@ -37,7 +37,7 @@ static NSString *CellIdentifier = @"LAFeedCell";
   self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
 
   ContentsProvider *provider = ContentsProvider.new;
-  [provider getAllWithCompletionBlock:^(NSError *error, id result) {
+  [provider downloadWithCompletionBlock:^(NSError *error, id result) {
     Contents *contents = result;
     self.contents = contents.contents;
     [self.tableView reloadData];
