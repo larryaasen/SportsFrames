@@ -21,7 +21,7 @@
   return result;
 }
 
-- (NSString *)requestURL
+- (NSString *)baseURL
 {
   return @"http://scores.espn.go.com/allsports/scorecenter/v2/videos/build?sport=top";
 }
