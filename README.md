@@ -1,6 +1,6 @@
 ## SportsFrames
 
-SportFrames is a fully functional iOS sample app created to demonstrate the use of [LaneKit](https://github.com/larryaasen/LaneKit), a tool that provides Objective-C models for integration with [RestKit](https://github.com/RestKit/RestKit). This app displays a nice list of current sports related images. Tapping on a image plays the corresponding video. There are two models in this app that were both created by LaneKit version 0.1.6.
+SportFrames is a fully functional iOS sample app created to demonstrate the use of [LaneKit](https://github.com/larryaasen/LaneKit), a tool that provides Objective-C models for integration with [RestKit](https://github.com/RestKit/RestKit). This app displays a nice list of current sports related images. Tapping on a image plays the corresponding video. There are two models in this app that were both created by LaneKit version 0.2.1.
 
 - [Source code for SportsFrames](https://github.com/LarryAasen/SportsFrames/zipball/master) from [GitHub](http://github.com).
 - Questions? [Stack Overflow](http://stackoverflow.com/questions/tagged/lanekit) is the best place to find answers.
