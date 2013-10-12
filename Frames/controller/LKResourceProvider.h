@@ -1,10 +1,10 @@
 //
 //  LKResourceProvider.h
 //
-//  This base provider was created on 2013-09-16 by LaneKit v0.2.1.
+//  This base provider was created on 2013-10-12 by LaneKit v0.2.1.
 //
-// The following LaneKit command was used to generate this provider:
-// lanekit generate model Video duration:string headline:string id:integer image:string itemDate:date location:string
+// The following LaneKit command was used to generate this file:
+// lanekit generate provider Contents Contents http://scores.espn.go.com/allsports/scorecenter/v2/videos/build?sport=top
 //
 
 #import "RestKit.h"

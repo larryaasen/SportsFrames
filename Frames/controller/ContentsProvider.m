@@ -1,39 +1,31 @@
-/*
- The MIT License
- 
- Copyright (c) 2013 Larry Aasen
- 
- Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- 
- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
+//
+//  ContentsProvider.m
+//
+//  This provider was created on 2013-10-12 by LaneKit v0.2.1.
+//
+// The following LaneKit command was used to generate this file:
+// lanekit generate provider Contents Contents http://scores.espn.go.com/allsports/scorecenter/v2/videos/build?sport=top
+//
 
 #import "ContentsProvider.h"
 
 @implementation ContentsProvider
-
-- (id)processResult:(RKMappingResult *)mappingResult withError:(NSError **)error
-{
-  Contents *contents = [mappingResult firstObject];
-  id result = contents;
-  return result;
-}
 
 - (NSString *)baseURL
 {
   return @"http://scores.espn.go.com/allsports/scorecenter/v2/videos/build?sport=top";
 }
 
-- (RKResponseDescriptor *)responseDescriptor
+- (Class)modelClass
 {
-  NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful);
-  return [RKResponseDescriptor responseDescriptorWithMapping:[Contents responseMapping]
-                                                      method:RKRequestMethodGET
-                                                 pathPattern:[Contents pathPattern]
-                                                     keyPath:[Contents keyPath]
-                                                 statusCodes:statusCodes];
+  return [Contents class];
+}
+
+- (id)processResult:(RKMappingResult *)mappingResult withError:(NSError **)error
+{
+  Contents *results = [mappingResult firstObject];
+  id result = results;
+  return result;
 }
 
 @end
