@@ -15,6 +15,7 @@
 #import "LAFeedCell.h"
 #import "Video.h"
 #import "UIImageView+AFNetworking.h"
+#import "SVPullToRefresh.h"
 #import <MediaPlayer/MPMoviePlayerController.h>
 #import <MediaPlayer/MPMoviePlayerViewController.h>
 
@@ -35,13 +36,20 @@ static NSString *CellIdentifier = @"LAFeedCell";
   
   self.tableView.rowHeight = LAFeedCell.cellHeight;
   self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
-
-  ContentsProvider *provider = ContentsProvider.new;
-  [provider downloadWithCompletionBlock:^(NSError *error, id result) {
-    Contents *contents = result;
-    self.contents = contents.contents;
-    [self.tableView reloadData];
+  
+  __unsafe_unretained typeof(self) weakSelf = self;
+  
+  [self.tableView addPullToRefreshWithActionHandler:^{
+    ContentsProvider *provider = ContentsProvider.new;
+    [provider downloadWithCompletionBlock:^(NSError *error, id result) {
+      Contents *contents = result;
+      weakSelf.contents = contents.contents;
+      [weakSelf.tableView.pullToRefreshView stopAnimating];
+      [weakSelf.tableView reloadData];
+    }];
   }];
+    
+  [self.tableView triggerPullToRefresh];
 }
 
 #pragma mark - Table view data source
@@ -79,4 +87,5 @@ static NSString *CellIdentifier = @"LAFeedCell";
     [self presentMoviePlayerViewControllerAnimated:self.player];
   }
 }
-@end
+
+   @end
