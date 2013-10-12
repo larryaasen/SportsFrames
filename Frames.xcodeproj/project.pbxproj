@@ -121,7 +121,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		460B98A31749CA3800015FA2 /* model */ = {
+		460B98A31749CA3800015FA2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				461C234317E7F96600B92C88 /* LKModel.h */,
@@ -131,7 +131,7 @@
 				460B98A61749CA4C00015FA2 /* Video.h */,
 				460B98A71749CA4C00015FA2 /* Video.m */,
 			);
-			name = model;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		462876661749C15E00D1AAD7 = {
@@ -171,14 +171,9 @@
 		462876781749C15E00D1AAD7 /* Frames */ = {
 			isa = PBXGroup;
 			children = (
-				46DEBD031796AF1800E048D0 /* controller */,
-				460B98A31749CA3800015FA2 /* model */,
-				462876811749C15E00D1AAD7 /* AppDelegate.h */,
-				462876821749C15E00D1AAD7 /* AppDelegate.m */,
-				460B98B61750FF4200015FA2 /* LAFeedCell.h */,
-				460B98B71750FF4200015FA2 /* LAFeedCell.m */,
-				4628768A1749C15E00D1AAD7 /* MainStoryboard_iPhone.storyboard */,
-				460B98BB1752BEE000015FA2 /* placeholder@2x.png */,
+				46DEBD031796AF1800E048D0 /* Controllers */,
+				460B98A31749CA3800015FA2 /* Models */,
+				46631CD117F52D2C00F6EB51 /* Views */,
 				462876791749C15E00D1AAD7 /* Supporting Files */,
 			);
 			path = Frames;
@@ -240,9 +235,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		46DEBD031796AF1800E048D0 /* controller */ = {
+		46631CD117F52D2C00F6EB51 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				460B98B61750FF4200015FA2 /* LAFeedCell.h */,
+				460B98B71750FF4200015FA2 /* LAFeedCell.m */,
+				4628768A1749C15E00D1AAD7 /* MainStoryboard_iPhone.storyboard */,
+				460B98BB1752BEE000015FA2 /* placeholder@2x.png */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		46DEBD031796AF1800E048D0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				462876811749C15E00D1AAD7 /* AppDelegate.h */,
+				462876821749C15E00D1AAD7 /* AppDelegate.m */,
 				46FB51AB17B6A63C009D732C /* LANavigationController.h */,
 				46FB51AC17B6A63C009D732C /* LANavigationController.m */,
 				461C234017E7F53300B92C88 /* LKResourceProvider.h */,
@@ -252,7 +260,7 @@
 				462EA1AB17B6A34400D5023C /* ContentsViewController.h */,
 				462EA1AC17B6A34400D5023C /* ContentsViewController.m */,
 			);
-			name = controller;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
