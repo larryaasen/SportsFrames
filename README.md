@@ -16,6 +16,14 @@ This screenshot was taken from the iOS 6.1 Simulator on July 14, 2013.
 
 <img src="https://github.com/larryaasen/SportsFrames/wiki/images/iOS%20Simulator%20Screen%20shot1.png" width="400" />
 
+## Creating Sports Frames Using LaneKit version 0.2.1
+
+1. lanekit generate model Video duration:string headline:string id:integer image:string itemDate:date location:string
+2. lanekit generate model Contents contents:array:Video
+3. lanekit generate provider Contents Contents http://scores.espn.go.com/allsports/scorecenter/v2/videos/build?sport=top
+4. change +[Video dictionaryForRequestMappings] method, line @"image": @"image" to @"image": @"image.uri".
+5. change +[Video dictionaryForResponseMappings] method, line @"image": @"image" to @"image.uri": @"image".
+
 ## Credits
 
 SportFrames was created by [Larry Aasen](https://github.com/larryaasen).
