@@ -1,0 +1,6 @@
+app_project_name: SportsFrames
+
+app_project_path: SportsFrames/SportsFrames.xcodeproj
+
+app_target_name: SportsFrames
+app_target_tests_name: SportsFramesTests

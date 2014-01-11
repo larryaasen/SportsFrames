@@ -16,7 +16,7 @@ This screenshot was taken from the iOS 6.1 Simulator on July 14, 2013.
 
 <img src="https://github.com/larryaasen/SportsFrames/wiki/images/iOS%20Simulator%20Screen%20shot1.png" width="400" />
 
-## Creating Sports Frames Using LaneKit version 0.4.4
+## Creating Sports Frames Using LaneKit version 0.4.5
 
     1. $ lanekit new SportsFrames
     2. $ cd SportsFrames
@@ -28,6 +28,7 @@ This screenshot was taken from the iOS 6.1 Simulator on July 14, 2013.
     8. modify +[Video dictionaryForResponseMappings] method, line @"image": @"image" to @"image.uri": @"image".
     9. modify -[LKAppDelegate application:didFinishLaunchingWithOptions:] method, change this "UIViewController.new" to "ContentsViewController.new". Also add an import line at the top of the file: #import "ContentsViewController.h".
     10. modify file ContentsViewController.m: add these lines to the top of the file:
+    #import "Video.h"
     #import <MediaPlayer/MPMoviePlayerController.h>
     #import <MediaPlayer/MPMoviePlayerViewController.h>
     11. modify file ContentsViewController.m: add these lines to -[ContentsViewController tableView:didSelectRowAtIndexPath:] method:
