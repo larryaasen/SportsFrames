@@ -12,9 +12,9 @@ SportFrames is a fully functional iOS sample app created to demonstrate the use 
 3. Run the app in the iOS Simulator.
 
 ## Screenshots
-This screenshot was taken from the iOS 6.1 Simulator on July 14, 2013.
+This screenshot was taken from the iOS 7.0.3 Simulator on Jan 11, 2014.
 
-<img src="https://github.com/larryaasen/SportsFrames/wiki/images/iOS%20Simulator%20Screen%20shot1.png" width="400" />
+<img src="https://github.com/larryaasen/SportsFrames/wiki/images/iOS%20Simulator%20Screen%20shot1.png" />
 
 ## Creating Sports Frames Using LaneKit version 0.4.5
 
